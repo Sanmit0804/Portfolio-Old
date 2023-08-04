@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sanmit Suthar</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="main.js"></script>
+</head>
+
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <a href="#Home">
+                    <a href="#"><img src="Logo.png" alt="logo" class="logo">
+                    </a></a>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#project">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+
+            <div class="header-text">
+                <h1>Hey, I'm <span>Sanmit</span> </h1>
+                <p>Web Developer</p><br>
+                <button class="button" ><a href="/Sanmit.pdf" target="_blank" download>Download CV</a></button>
+
+
+
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <h2>About me</h2><br>
+            <p>
+                Passionate computer engineering student seeking a
+                challenging role to apply technical skills in a dynamic work
+                environment. Dedicated to contributing to the development of innovative software and hardware
+                solutions. Eager to collaborate with a talented team to
+                tackle challenges and enhance expertise in
+                computer engineering.
+            </p>
+            <div class="tab-titles">
+                <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+                <ul>
+                    <li><span>Programming Languages</span><br>Java, C, Python</li>
+                    <li><span>Web Development</span><br>HTML, CSS, (Bootstrap), JavaScript</li>
+                    <li><span>Editing</span><br>Edit content on Adobe photoshop/premiere pro</li>
+                </ul>
+            </div>
+            <div class="tab-contents" id="education">
+                <ul>
+                    <li><span>Bachelors in Computer engineering - 8.02CPI</span><br>Sardar Vallabhbhai Patel Institute
+                        of technology, Vasad<br>
+                        <p>2020 - Present</p>
+                    </li>
+                    <li><span>Higer Secondary Certificate - 69.69%</span><br>Parth School of Science and competition,
+                        Vadodara <br>
+                        <p>Completed in 2020</p>
+                    </li>
+                    <li><span>Secondary School Certificate - 84.33%</span><br>Utkarsh Vidhyalaya, Vadodara<br>
+                        <p>Completed in 2018</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="project">
+        <div class="container">
+            <h2>Projects</h2><br>
+
+            <ul>
+                <li>Made a Smart Home model for college, which
+                    incorporates auto-door opening in the presence of
+                    motion, Lights on/off according to the natural light
+                    presence, and auto door opening garage using IoT
+                    Technology.</li><br>
+                <li> Developed many website clones like Amazon website
+                    using HTML5, CSS3, Bootstrap and JavaScript, recreating
+                    key features such as product listings, shopping cart
+                    functionality, and user authentication.</li>
+            </ul>
+        </div>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><b><br><br><br><br>
+    </b>
+
+    <!-- -----------------  Contact  ----------------  -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+
+
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+
+
+                    <p> <i class="fa-regular fa-envelope fa icon "></i>sanmitsuthar3@gmail.com</p>
+
+
+                    <p><a href="tel:+919409531985"><i class="fa-solid fa-phone  icon"></i>9409531985</p>
+
+                    <!-- <a href=“tel:555-666-7777”>555-666-7777</a> -->
+                    <div class="social-icons">
+                        <a href="https://in.linkedin.com/in/sanmit-suthar-650175238" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/im_sanmit_/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/+919409531985" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+                </div>
+
+
+
+                <div class="contact-right">
+                    <form action="">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" id="email" placeholder="Your Email">
+                        <textarea name="message" id="" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="button">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright &#169;  Sanmit Suthar&#x1F60E;</p>
+    </div>
+
+</body>
+
+</html>
