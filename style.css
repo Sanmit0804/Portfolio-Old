@@ -3,6 +3,7 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+
     
 }
 
@@ -19,7 +20,6 @@ body {
     height: 500px;
     width: 100%;
     background-repeat: no-repeat;
-
 }
 
 ::selection {
@@ -46,14 +46,14 @@ body {
 }
 
 nav {
+    /* width: 100%; */
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.9);
 }
-
 
 
 nav ul li {
@@ -81,7 +81,9 @@ nav ul li a::after {
     background: rgb(193, 0, 0);
     position: absolute;
     left: 0;
-    bottom: -6px;
+    /* left: 50%; */
+    /* transform:translate(-50%); */
+    bottom: -8px;
     transition: 0.5s;
 }
 
@@ -96,6 +98,7 @@ nav ul li a:active {
 /* =====================  Button  ============== */
 
 .button {
+    margin-top: 40px;
     text-decoration: none;
     color: white;
     background-color: #202123;
@@ -105,6 +108,7 @@ nav ul li a:active {
     font-size: small;
     transition: all;
     transition: transform 0.5s;
+    cursor: pointer;
 }
 
 .button a {
@@ -152,6 +156,89 @@ nav ul li a:active {
     color: white;
 }
 
+#myName{
+    font-size: 90px;
+    color: transparent;
+    -webkit-text-stroke: 1px #202123;
+    background-image: url(back.png);
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite ;
+
+}
+
+@keyframes back {
+    100%{
+        background-position: 2000px 0;
+    }
+    
+}
+
+
+/* =================   Dynamic text  ============ */
+
+/* .wrapper{
+    display: flex;
+}
+
+.wrapper .static-txt{
+    color: #fff;
+    font-size: 60px;
+    font-weight: 400;
+}
+
+.wrapper .dynamic-txts{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+}
+
+.dynamic-txts li{
+    list-style-type: none;
+    color: rgb(193, 0, 0);
+    font-size: 60px;
+    font-weight: 500;
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100%
+    {
+        top: -360px;
+    }
+}
+
+.dynamic-txts li span{
+    position: relative;
+    margin: 5px 0;
+    line-height: 90px;
+}
+
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: white;
+    border-left: 2px solid #fc6d6d;
+    animation: typing 3s steps(10) infintie;
+}
+
+@keyframes typing {
+    40%, 60%{
+        left: calc(100% + 30px);
+    }
+    100%{
+        left: 0;
+    }   
+} */
+
+
 
 /* =========================    About    ============================= */
 
@@ -190,10 +277,10 @@ nav ul li a:active {
     transition: 0.5s;
 }
 
-/* .tab-links:hover::after
+.tab-links:hover::after
 {
     width: 100%;
-} */
+}
 
 .tab-links.active-link::after {
     width: 100%;
@@ -234,15 +321,15 @@ nav ul li a:active {
 /* ============= Contact ================= */
 
 #contact {
-    padding: 80px 20%;
+    padding: 10px 20%;
     color: #202123;
  
 }
 
 .contact-left {
     /* float: left; */
-    margin: auto ;
-    margin-bottom: 40px;
+    /* margin: auto ;
+    margin-bottom: 40px; */
 }
 
 .contact-right {
@@ -283,6 +370,7 @@ nav ul li a:active {
     transition: transform 0.5s;
 }
 
+
 .social-icons a:hover {
     color: rgb(193, 0, 0);
     transform: translateY(-5px);
@@ -312,6 +400,8 @@ form input, form textarea{
     justify-content: center;
     background-color: rgba(44, 44, 44, 0.3);
     padding: 20px;
+    /* margin-bottom: 70px; */
+    padding-bottom: 80px;
 }
 
 /* =====================   Responsiveness  ====================== */
@@ -370,4 +460,49 @@ form input, form textarea{
         justify-content: justify;
         align-items: center;
     }
+}
+
+@media (max-width:600px) {
+    #header{
+        margin-top: -90px;    
+    }
+
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: fixed;
+        width: 100%;
+        height: 60px;
+        background-color: rgba(234, 234, 234, 0.9);
+        bottom: 0;
+        left: 0;
+        right: 0;
+    }
+    
+    
+    nav ul li {
+        display: inline-block;
+        list-style: none;
+        margin: 10px 20px;
+      
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #202123;
+        position: relative;
+        transition: 0.2s;
+    }
+    .logo{
+        display: none;
+    }
+}
+
+/* ==============  submit msg  ================== */
+
+#msg{
+    color: #61b752;
+    margin-top: 10px;
+    display: block;
 }
