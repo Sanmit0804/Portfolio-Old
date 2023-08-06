@@ -30,9 +30,29 @@
 
 
             <div class="header-text">
-                <h1>Hey, I'm <span>Sanmit</span> </h1>
-                <p>Web Developer</p><br>
-                <button class="button" ><a href="/Sanmit.pdf" target="_blank" download>Download CV</a></button>
+                <h1>Hey, I'm <span id="myName">Sanmit</span> </h1>
+                
+                
+                <!-- <span class="dynamic-text">Web Developer</span><br> -->
+
+                <!-- <div class="wrapper">
+                    <div class="static-txt">I'm a</div>
+                    <ul class="dynamic-txts">
+                        <li><span>Developer</span></li>
+                        <li><span>Programmer</span></li>
+                        <li><span>Photographer</span></li>
+                        <li><span>Editor</span></li>
+                    </ul>
+                </div> -->
+
+                <h1>
+                    <a href="" style="font-size: 40px; text-decoration: none;"  class="typewrite" data-period="2000" data-type='[ "Developer", "Programmer", "Photographer", "Editor" ]'>
+                      <span class="wrap"></span>
+                    </a>
+                  </h1>
+
+
+                <button class="button" ><a href="/Sanmit.pdf" target="_blank" >Download CV</a></button>
 
 
 
@@ -51,7 +71,7 @@
                 computer engineering.
             </p>
             <div class="tab-titles">
-                <p class="tab-links active-links" onclick="opentab('skills')">Skills</p>
+                <p class="tab-links active-links" onclick="opentab('skills') ">Skills</p>
                 <p class="tab-links" onclick="opentab('education')">Education</p>
             </div>
             <div class="tab-contents active-tab" id="skills">
@@ -79,7 +99,6 @@
         </div>
     </div>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <div id="project">
         <div class="container">
             <h2>Projects</h2><br>
@@ -96,8 +115,8 @@
                     functionality, and user authentication.</li>
             </ul>
         </div>
-    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><b><br><br><br><br>
-    </b>
+    </div>
+
 
     <!-- -----------------  Contact  ----------------  -->
     <div id="contact">
@@ -127,12 +146,13 @@
 
 
                 <div class="contact-right">
-                    <form action="">
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="email" name="email" id="email" placeholder="Your Email">
-                        <textarea name="message" id="" rows="6" placeholder="Your Message"></textarea>
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" >
+                        <input type="email" name="Email" id="email" placeholder="Your Email">
+                        <textarea name="Message" id="" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="button">Submit</button>
                     </form>
+                    <span id="msg"></span>
                 </div>
             </div>
         </div>
@@ -141,6 +161,25 @@
         <p>Copyright &#169;  Sanmit Suthar</p>
     </div>
 
+      
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwNbpQg5MPYq2YWrQ-U38hpNdEr408fhxNn-x4Od35s6x5ZRh5lZpU6YpJ_bzZrSd9v/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent successfully"
+                setTimeout(function(){
+                    msg.innerHTML =""
+                },1000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 
 </html>
