@@ -7,6 +7,7 @@
 
 html {
     scroll-behavior: smooth;
+    
 }
 
 :root {
@@ -20,6 +21,8 @@ html {
     --secondary-color: rgb(255, 255, 255);
     --secondary-shadow-color: rgba(255, 255, 255, 0.19);
     --navbar-color: rgba(0, 0, 0, 0.9);
+    background-image: url(SPS_0051.JPG);
+    background-size: cover;
 }
 
 .dark-mode {
@@ -42,6 +45,7 @@ body {
     width: 100%;
     background-repeat: no-repeat;
     transition: background 0.8s, color 0.8s;
+
 }
 
 ::selection {
@@ -517,5 +521,7 @@ form textarea {
 
 .submission{
     color: #61b752;
-    padding-top: 7px;
+    padding-top: 10px;
 }
+
+
