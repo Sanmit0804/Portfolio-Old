@@ -14,6 +14,9 @@
 
 
 <body>
+    <div class="dark-mode">
+        <img src="dark theme icon/moon.png" id="icon" alt="Dark">
+    </div>
     <div id="header">
         <div class="container">
             <nav>
@@ -25,14 +28,16 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#project">Projects</a></li>
                     <li><a href="#contact">Contact</a></li>
+
                 </ul>
+
             </nav>
 
 
             <div class="header-text">
                 <h1>Hey, I'm <span id="myName">Sanmit</span> </h1>
-                
-                
+
+
                 <!-- <span class="dynamic-text">Web Developer</span><br> -->
 
                 <!-- <div class="wrapper">
@@ -46,13 +51,16 @@
                 </div> -->
 
                 <h1>
-                    <a href="" style="font-size: 40px; text-decoration: none;"  class="typewrite" data-period="2000" data-type='[ "Developer", "Programmer", "Photographer", "Editor" ]'>
-                      <span class="wrap"></span>
+                    <a href="" style="font-size: 40px; text-decoration: none;" class="typewrite" data-period="2000"
+                        data-type='[ "Developer", "Programmer", "Photographer", "Editor" ]'>
+                        <span class="wrap"></span>
                     </a>
-                  </h1>
+                </h1>
 
 
-                <button class="button" ><a href="https://drive.google.com/file/d/1ph9zV5dykVlCCKYS0tSmy1b0AgNaMYze/view?usp=sharing" target="_blank" >Download CV</a></button>
+                <button class="button"><a
+                        href="https://drive.google.com/file/d/1ph9zV5dykVlCCKYS0tSmy1b0AgNaMYze/view?usp=sharing"
+                        target="_blank">Download CV</a></button>
 
 
 
@@ -110,9 +118,7 @@
                     presence, and auto door opening garage using IoT
                     Technology.</li><br>
                 <li> Developed many website clones like Amazon website
-                    using HTML5, CSS3, Bootstrap and JavaScript, recreating
-                    key features such as product listings, shopping cart
-                    functionality, and user authentication.</li>
+                    using HTML5, CSS3, Bootstrap and JavaScript, It gives understanding of how web development technologies work together.</li>
             </ul>
         </div>
     </div>
@@ -124,14 +130,14 @@
             <div class="row">
 
 
-                <div class="contact-left">
+                <!-- <div class="contact-left">
                     <h1 class="sub-title">Contact Me</h1>
 
 
-                    <p> <i class="fa-regular fa-envelope fa icon "></i><a href = "mailto: sanmitsuthar3@gmail.com">sanmitsuthar3@gmail.com</a></p>
+                    <p> <i class="fa-regular fa-envelope fa icon "></i><a
+                            href="mailto: sanmitsuthar3@gmail.com">sanmitsuthar3@gmail.com</a></p>
 
 
-                    <!-- <a href=“tel:555-666-7777”>555-666-7777</a> -->
                     <p><a href="tel:+919409531985"><i class="fa-solid fa-phone  icon"></i>9409531985</p>
 
                     <div class="social-icons">
@@ -148,39 +154,81 @@
 
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name" >
+                        <input type="text" name="Name" placeholder="Your Name">
                         <input type="email" name="Email" id="email" placeholder="Your Email">
                         <textarea name="Message" id="" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="button">Submit</button>
                     </form>
                     <span id="msg"></span>
+                </div> -->
+
+                <div class="contact-info">
+                    <h1 class="sub-title">Contact Me</h1>
+
+                    <p> <i class="fa-regular fa-envelope fa icon "></i><a
+                            href="mailto: sanmitsuthar3@gmail.com">sanmitsuthar3@gmail.com</a></p>
+                    <p><a href="tel:+919409531985"><i class="fa-solid fa-phone  icon"></i>9409531985</p>
+
+                    <div class="social-icons">
+                        <a href="https://in.linkedin.com/in/sanmit-suthar-650175238" target="_blank"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/im_sanmit_/" target="_blank">
+                            <i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.me/+919409531985" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://github.com/Sanmit0804" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    </div>
+
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name">
+                        <input type="email" name="Email" id="email" placeholder="Your Email">
+                        <textarea name="Message" id="" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="button">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+
+
                 </div>
             </div>
         </div>
     </div>
     <div class="footer">
-        <p>Copyright &#169;  Sanmit Suthar</p>
+        <p>Copyright &#169; Sanmit Suthar</p>
     </div>
 
-      
-      <script>
+
+    <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwNbpQg5MPYq2YWrQ-U38hpNdEr408fhxNn-x4Od35s6x5ZRh5lZpU6YpJ_bzZrSd9v/exec'
         const form = document.forms['submit-to-google-sheet']
         const msg = document.getElementById("msg")
-      
+
         form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                setTimeout(function(){
-                    msg.innerHTML =""
-                },1000)
-                form.reset()
-            })
-            .catch(error => console.error('Error!', error.message))
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    setTimeout(function () {
+                        msg.innerHTML = ""
+                    }, 1000)
+                    form.reset()
+                })
+                .catch(error => console.error('Error!', error.message))
         })
-      </script>
+    </script>
+
+    <script>
+        //===========  Dark Mode on/off =========
+
+        let icon = document.getElementById("icon");
+        icon.onclick = function () {
+            document.body.classList.toggle("dark-theme");
+
+            if (document.body.classList.contains("dark-theme")) {
+                icon.src = "dark theme icon/sun.png"
+            } else {
+                icon.src = "dark theme icon/moon.png"
+            }
+        }
+    </script>
 </body>
 
 </html>
