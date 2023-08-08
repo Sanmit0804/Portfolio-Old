@@ -179,10 +179,11 @@
                     </div>
 
                     <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your Name">
+                        <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" id="email" placeholder="Your Email">
                         <textarea name="Message" id="" rows="6" placeholder="Your Message"></textarea>
                         <button type="submit" class="button">Submit</button>
+                        <p class="submission">Submission may take 2-3 Seconds</p>
                     </form>
                     <span id="msg"></span>
 
@@ -205,10 +206,12 @@
             e.preventDefault()
             fetch(scriptURL, { method: 'POST', body: new FormData(form) })
                 .then(response => {
-                    msg.innerHTML = "Message sent successfully"
+
+                    // msg.innerHTML = "Message sent successfully!!!"
+                    alert("Message sent successfully!!")
                     setTimeout(function () {
                         msg.innerHTML = ""
-                    }, 1000)
+                    }, 5000)
                     form.reset()
                 })
                 .catch(error => console.error('Error!', error.message))
