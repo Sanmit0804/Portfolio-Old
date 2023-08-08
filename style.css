@@ -3,28 +3,50 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
-
-    
 }
 
 html {
     scroll-behavior: smooth;
-    
+}
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: rgb(37, 37, 37);
+    --secondary-shadow-color: rgba(37, 37, 37, 0.19);
+    --navbar-color: rgba(255, 255, 255, 0.9);
+}
+.dark-theme{
+    --primary-color: black;
+    --secondary-color: rgb(255, 255, 255);
+    --secondary-shadow-color: rgba(255, 255, 255, 0.19);
+    --navbar-color: rgba(0, 0, 0, 0.9);
+}
+
+.dark-mode {
+    top: 20px;
+    right: 30px;
+    position: fixed;
+}
+
+#icon{
+    width: 30px;
+    cursor: pointer;
 }
 
 body {
-    background: #ffffff;
-    color: rgb(37, 37, 37);
-    background-image: url(Sanmit\ Pic.png);
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    /* background-image: url(Sanmit\ Pic.png); */
     background-size: cover;
     height: 500px;
     width: 100%;
     background-repeat: no-repeat;
+    transition: background 0.8s, color 0.8s;
 }
 
 ::selection {
-    color: white;
-    background-color: rgb(37, 37, 37);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 #header {
@@ -35,7 +57,8 @@ body {
 
 .container {
     padding: 10px;
-
+    /* color: var(--secondary-color);
+    background-color: var(--primary-color); */
 }
 
 .logo {
@@ -52,7 +75,7 @@ nav {
     justify-content: space-between;
     flex-wrap: wrap;
     position: fixed;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--navbar-color);
 }
 
 
@@ -64,7 +87,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #202123;
+    color: var(--secondary-color);
     position: relative;
     transition: 0.2s;
 }
@@ -98,12 +121,12 @@ nav ul li a:active {
 /* =====================  Button  ============== */
 
 .button {
-    margin-top: 40px;
+    /* margin-top: 40px; */
     text-decoration: none;
-    color: white;
-    background-color: #202123;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
     padding: 10px;
-    border: 3px solid #202123;
+    border: 3px solid var(--secondary-color);
     border-radius: 10px;
     font-size: small;
     transition: all;
@@ -113,16 +136,14 @@ nav ul li a:active {
 
 .button a {
     text-decoration: none;
-    color: white;
-
+    color: var(--primary-color);
 }
 
 .button:hover {
     /* color: rgb(193, 0, 0); */
     /* background-color: rgb(255, 255, 255); */
     transform: translateY(-5px);
-    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-
+    box-shadow: 0 12px 16px 0 var(--secondary-shadow-color), 0 17px 50px 0 var(--secondary-shadow-color);
 }
 
 
@@ -140,7 +161,7 @@ nav ul li a:active {
     font-size: 60px;
     margin-top: 20px;
     margin-bottom: 4px;
-    color: #202123;
+    color: var(--secondary-color);
 }
 
 .header-text h1 span {
@@ -152,27 +173,27 @@ nav ul li a:active {
 }
 
 .header-text::first-letter::selection {
-    background-color: #202123;
-    color: white;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
-#myName{
+#myName {
     font-size: 90px;
     color: transparent;
-    -webkit-text-stroke: 1px #202123;
+    -webkit-text-stroke: 1px var(--secondary-color);
     background-image: url(back.png);
     background-size: cover;
     -webkit-background-clip: text;
     background-position: 0 0;
-    animation: back 20s linear infinite ;
+    animation: back 20s linear infinite;
 
 }
 
 @keyframes back {
-    100%{
+    100% {
         background-position: 2000px 0;
     }
-    
+
 }
 
 
@@ -243,17 +264,18 @@ nav ul li a:active {
 /* =========================    About    ============================= */
 
 #about {
-    width: 90%;
+    width: 100%;
+    padding: 80px 15%;
     border-radius: 40px;
-    padding: 80px 20%;
-    color: #202123;
     display: flex;
     justify-content: justify;
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.3);
+    /* background-color: rgba(255, 255, 255, 0.3); */
 }
 
 .tab-titles {
+    color: var(--secondary-color);
+
     padding-top: 50px;
     padding-bottom: 20px;
     display: flex;
@@ -261,6 +283,8 @@ nav ul li a:active {
 }
 
 .tab-links {
+    color: var(--secondary-color);
+
     margin-right: 30px;
     cursor: pointer;
     position: relative;
@@ -277,8 +301,7 @@ nav ul li a:active {
     transition: 0.5s;
 }
 
-.tab-links:hover::after
-{
+.tab-links:hover::after {
     width: 100%;
 }
 
@@ -311,53 +334,50 @@ nav ul li a:active {
 /* ================  Projects  ================ */
 
 #project {
-    padding: 80px 20%;
-    color: #202123;
-    display: flex;
-    justify-content: justify;
-    align-items: center;
+    width: 100%;
+    padding: 80px 15%;
+}
+
+#project ul {
+    color: var(--secondary-color);
+
+}
+
+#project h2 {
+    color: var(--secondary-color);
 }
 
 /* ============= Contact ================= */
 
-#contact {
-    padding: 10px 20%;
-    color: #202123;
- 
+.contact-info{
+    padding: 80px 15%;
+    
 }
 
-.contact-left {
-    /* float: left; */
-    /* margin: auto ;
-    margin-bottom: 40px; */
-}
-
-.contact-right {
-    /* float: right; */
-
-}
-
-.contact-left p i {
-    padding: 20px 20px 10px 0px;
+.contact-info p i {
+    padding: 20px 20px 0px 0px;
     font-size: 20px;
     color: rgb(193, 0, 0);
+
 }
 
 
-.contact-left p a{
+.contact-info p a {
     text-decoration: none;
-    color: #202123;
+    color: var(--secondary-color);
 }
 
-.contact-left p a:hover{
+.contact-info p a:hover {
     color: rgb(193, 0, 0);
 }
-.contact-right {
+
+.contact-info {
     flex-basis: 60%;
 }
 
 .social-icons {
-    margin-top: 20px;
+    margin-top: 25px;
+    margin-bottom: 10px;
 }
 
 .social-icons a {
@@ -366,7 +386,7 @@ nav ul li a:active {
     margin-right: 10px;
 
     display: inline-block;
-    color: #202123;
+    color: var(--secondary-color);
     transition: transform 0.5s;
 }
 
@@ -376,18 +396,20 @@ nav ul li a:active {
     transform: translateY(-5px);
 }
 
-.contact-right form{
+.contact-info form {
     width: 100%;
 }
 
-form input, form textarea{
+form input,
+form textarea {
     width: 100%;
     border: 0;
-    outline :none;
-    background:rgb(226, 226, 226);
+    outline: none;
+    background: var(--secondary-shadow-color);
     padding: 15px;
     margin: 15px 0;
-    color: #626977;
+    color: var(--secondary-color);
+
     font-size: 18px;
     border-radius: 6px;
 }
@@ -395,7 +417,7 @@ form input, form textarea{
 
 /* =====================  footer  ================== */
 
-.footer{
+.footer {
     display: flex;
     justify-content: center;
     background-color: rgba(44, 44, 44, 0.3);
@@ -407,64 +429,16 @@ form input, form textarea{
 /* =====================   Responsiveness  ====================== */
 
 
-@media (max-width:945px)
-{
-    body{
-        background-image: none;
-    }   
-    .header-text{
-        margin-top: 200px;  
+@media (max-width:600px) {
+    .header-text {
+        margin-top: 200px;
     }
+
     nav ul li {
         margin-right: 5px;
     }
-    #about{
-        padding-top: 27%;
-        width: 100%;
-        margin: 0;
-        text-align: left;
-    }
-    #project{
-        padding-top: 27%;
-    }
-    #contact{
-        padding-top: 27%;
-        font-size: small;
-    }
-    form input, form textarea{
-        width: 100%;
-        border: 0;
-        outline :none;
-        background:rgb(226, 226, 226);
-        padding: 10px;
-        /* margin: 15px 0; */
-        color: #626977;
-        font-size: 13px;
-        border-radius: 6px;    
-    }
-
-    #about {
-        width: 100%;
-        /* border-radius: 40px; */
-        padding: 100px 2%;
-        color: #202123;
-        display: flex;
-        justify-content: justify;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.3);
-    }
-    #project {
-        padding: 100px 10%;
-        color: #202123;
-        display: flex;
-        justify-content: justify;
-        align-items: center;
-    }
-}
-
-@media (max-width:600px) {
-    #header{
-        margin-top: -90px;    
+    #header {
+        margin-top: -90px;
     }
 
     nav {
@@ -474,34 +448,61 @@ form input, form textarea{
         position: fixed;
         width: 100%;
         height: 60px;
-        background-color: rgba(234, 234, 234, 0.9);
+        background-color: var(--navbar-color);
         bottom: 0;
         left: 0;
         right: 0;
     }
-    
-    
+
+
     nav ul li {
         display: inline-block;
         list-style: none;
         margin: 10px 20px;
-      
     }
-    
+
+
     nav ul li a {
         text-decoration: none;
-        color: #202123;
+        color: var(--secondary-color);
         position: relative;
         transition: 0.2s;
     }
-    .logo{
+
+    .logo {
         display: none;
     }
+
+    #about {
+        padding: 80px 5%;
+    }
+
+    #project {
+        padding: 80px 5%;
+
+    }
+
+    #contact-info {
+        padding: 0px 5%;
+    }
+
+    form input,
+    form textarea {
+        font-size: small;
+        padding: 8px;
+        
+    }
+
+    .button{
+        padding: 5px;
+    }
+
+
 }
 
 /* ==============  submit msg  ================== */
 
-#msg{
+#msg {
     color: #61b752;
     margin-top: 10px;
     display: block;
