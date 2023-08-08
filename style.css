@@ -132,6 +132,7 @@ nav ul li a:active {
     transition: all;
     transition: transform 0.5s;
     cursor: pointer;
+    display: inline-block;
 }
 
 .button a {
@@ -150,6 +151,7 @@ nav ul li a:active {
     /* background-color: grey; */
     transform: scale(0.90);
 }
+
 
 
 
@@ -187,6 +189,7 @@ nav ul li a:active {
     -webkit-text-stroke: 1px var(--secondary-color);
     background-image: url(back.png);
     background-size: cover;
+    background-clip: border-box;
     -webkit-background-clip: text;
     background-position: 0 0;
     animation: back 20s linear infinite;
@@ -508,6 +511,11 @@ form textarea {
 
 #msg {
     color: #61b752;
-    margin-top: 10px;
-    display: block;
+    margin-top: 3px;
+    display: inline-block;
+}
+
+.submission{
+    color: #61b752;
+    padding-top: 7px;
 }
